@@ -1,7 +1,7 @@
 terraform {
-    required.version = "~>1.3"
+    required_version = "~>1.5"
 }
 
-Provider "aws" {
+provider "aws" {
     region = "ap-south-1"
 }
