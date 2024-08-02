@@ -1,7 +1,7 @@
-Provider "aws" {
-    region = "ap-south-1"
+terraform {
+    required.version = "~>1.3"
 }
 
-resource "aws.instance" "Autodesk-Instance" {
-    
+Provider "aws" {
+    region = "ap-south-1"
 }
