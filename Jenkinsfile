@@ -1,17 +1,14 @@
-Pipeline {
-  agent any
-    stages {
-      stage ('git checkout'){
-        steps {
-          git branch: 'main', credentialsId: 'Github_PAT_UP', url: 'https://github.com/sreedharkoduri/skoduri-Msys.git'
-        }
+pipeline {
+  stages {
+    stage('stage1 hello world') {
+      steps {
+        echo 'Hello World stage executing'
       }
-      stage ('Terraform init') {    
-        step {
-          sh 'terraform init'
-        }
+    }
+    stage('stage2 git checkout') {
+      steps {
+        echo 'git checkout stage executing'
+        git branch: 'main', credentialsId: 'Github_PAT_UP', url: 'https://github.com/sreedharkoduri/skoduri-Msys.git'}
       }
-   }   
-}
-
-
+    }
+  }
