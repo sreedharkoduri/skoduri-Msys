@@ -16,7 +16,7 @@ pipeline {
         steps {
           sh 'cd Autodesk-Terraform'
         }
-
+      } 
       stage ('Terraform init') {    
         steps {
           sh 'terraform init'
