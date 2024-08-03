@@ -11,5 +11,16 @@ pipeline {
         echo 'git checkout stage executing'
         git branch: 'main', credentialsId: 'Github_PAT_UP', url: 'https://github.com/sreedharkoduri/skoduri-Msys.git'}
       }
+
+      stage ('Change dir to Terraform') {
+        steps {
+          sh 'cd Autodesk-Terraform'
+        }
+
+      stage ('Terraform init') {    
+        steps {
+          sh 'terraform init'
+        }
+      }
     }
   }
